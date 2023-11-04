@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .image-gallery img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .controls {
+            text-align: center;
+        }
+        
+        .controls button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-gallery">
+        <img id="galleryImage" alt="Image 1">
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        const images = [
+            'https://images.pexels.com/photos/715134/pexels-photo-715134.jpeg?auto=compress&cs=tinysrgb&w=300',
+            'https://images.pexels.com/photos/1008000/pexels-photo-1008000.jpeg?auto=compress&cs=tinysrgb&w=300',
+            'https://images.pexels.com/photos/352096/pexels-photo-352096.jpeg?auto=compress&cs=tinysrgb&w=300',
+            // 'https://example.com/image4.jpg',
+        ];
+
+        let currentImageIndex = 0;
+        const imgElement = document.getElementById('galleryImage');
+        const prevButton = document.getElementById('prevBtn');
+        const nextButton = document.getElementById('nextBtn');
+
+        function updateImage() {
+            imgElement.src = images[currentImageIndex];
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateImage();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateImage();
+        });
+
+        updateImage();
+    </script>
+</body>
+</html>
