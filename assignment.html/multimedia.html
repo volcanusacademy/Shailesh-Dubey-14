@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contents">
+    <ul class="book">
+        <li class="chepter">Bersercar</li>
+       <li class="chapter">Sorceres</li>
+       <li>Blade Dancer</li>
+       <li>Puppet Master</li>
+       <li>Shivam Gupta</li>
+   </ul>
+</div>
+   <script>
+
+
+let chapter = document.querySelector('.chapter');
+
+alert(chepter.closest('.book'));
+alert(chapter.closest('.contents'));
+
+
+   </script> 
+    
+
+</body>
+</html>
+
+
+
+=============================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="book" id="list">
+        <li class="chepter">Bersercar</li>
+       <li class="chapter">Sorceres</li>
+       <li>Blade Dancer</li>
+       <li>Puppet Master</li>
+       <li>Shivam Gupta</li>
+   </ul>
+   <script>
+var mynewlinklist = document.getElementById("list")
+var display = mynewlinklist.childNodes[3];
+
+alert(display.textContent);
+
+let chapter = document.querySelector('chapter');
+
+alert(chepter.closest('book'));
+alert(chapter.closest('contents'));
+
+alert
+   </script> 
+    
+
+</body>
+</html>
