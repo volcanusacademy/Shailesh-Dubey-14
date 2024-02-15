@@ -1,0 +1,40 @@
+//cpp program to create a notepad that takes input from user and saves in a file using file handling
+
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+int
+main ()
+{
+  
+string temp;
+  
+ifstream obj ("bus_DAta1.txt");
+  
+if (obj.is_open ())
+    {
+      
+while (getline (obj, temp))
+	{
+	  
+cout << temp;
+	
+};
+      
+obj.close ();
+    
+}
+  
+  else
+    {
+      
+cout << "unable";
+    
+}
+
+}
+
+ 
+
